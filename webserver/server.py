@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect
 import datetime
 from gpiozero import Servo
 from time import sleep
-
+import os
 isRunning = False
 
 app = Flask(__name__)
@@ -10,13 +10,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-   now = datetime.datetime.now()
-   timeString = now.strftime("%Y-%m-%d %H:%M")
-   templateData = {
+    now = datetime.datetime.now()
+    timeString = now.strftime("%Y-%m-%d %H:%M")
+    templateData = {
       'title' : 'HELLO!',
       'time': timeString
       }
-   return render_template('index.html', **templateData)
+    
+    os.system('./webcam.sh')
+    return render_template('index.html', **templateData)
 
 @app.route("/<servoNumber>")
 def activate_servo(servoNumber):
