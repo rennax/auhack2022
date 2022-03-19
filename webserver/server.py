@@ -18,7 +18,7 @@ def hello():
       }
    return render_template('index.html', **templateData)
 
-@app.route("/<servo>")
+@app.route("/<servoNumber>")
 def activate_servo(servoNumber):
     global isRunning
     if isRunning == True:
@@ -26,13 +26,15 @@ def activate_servo(servoNumber):
 
     isRunning = True
     servoDev = None
+    print(servoNumber)
+
 
     if servoNumber == "5":
-        servoDev = Servo(5, min_pulse_width= 0.5/1000, max_pulse_width=2.4/1000)
+        servoDev = Servo(5, min_pulse_width=0.5/1000, max_pulse_width = 2.4/1000)
     elif servoNumber == "6":
-        servoDev = Servo(6,  min_pulse_width= 0.5/1000, max_pulse_width=2.4/1000)
+        servoDev = Servo(6,  min_pulse_width=0.5/1000, max_pulse_width = 2.4/1000)
     elif servoNumber == "13":
-        servoDev = Servo(13, min_pulse_width= 0.5/1000, max_pulse_width=2.4/1000)
+        servoDev = Servo(13, min_pulse_width=0.5/1000, max_pulse_width = 2.4/1000)
     else:
         return redirect("/", 404)
 
