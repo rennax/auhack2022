@@ -1,17 +1,24 @@
 <!DOCTYPE html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
    <head>
-      <title>{{ title }}</title>
+      <title></title>
    </head>
    <body>
-        <h1>Hello, World!</h1>
-        <h2>The date and time on the server is: {{ time }}</h2>
-        <div>
-            <button><a href="/1">Project 1</button>
-            <button><a href="/2">Project 2</button>
-            <button><a href="/3">Project 3</button>
+
+        <div class="container"></div>
+        <div class="row">
+            <a class="item project" href="/project/1" >Project 1</a>
+            <a class="item project" href="/project/2">Project 2</a>
+            <a class="item project" href="/project/3">Project 3</a>
         </div>
-        <div>
-            <img src="static/latest.jpg" alt="">
+
+        <div class="row">
+            <a class="item user user3" href="/user/1">User 1</a>
+            <a class="item user user2" href="/user/2">User 2</a>
+            <a class="item user user1" href="/user/3">User 3</a>
+        </div>
+        <div class="row live">
+            <img class="" src="static/latest.jpg" alt="">
         </div>
         
    </body>

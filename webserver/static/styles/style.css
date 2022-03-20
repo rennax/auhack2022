@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:lighter;
+    display: block;
+    flex-grow: 3;
+    line-height: 150px;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    cursor: pointer;
+}
+
+.live {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin-top: 50px;
+}
+.project {
+    border: 3px solid #51aaa3;
+}
+
+
+.user1 {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+
+.user2 {
+    background-color: rgba(81, 255, 0, 0.692);
+}
+
+.user3 {
+    background-color: rgba(255, 251, 0, 0.692);
+}

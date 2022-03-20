@@ -24,24 +24,14 @@ def push_out():
 
 servo_big.mid()
 push_out()
-
-servo_big.min()
+sleep(0.5)
 push_out()
+sleep(0.5)
 
-
-servo_big.mid()
-push_out()
-
-servo_big.max()
-push_out()
-
-servo_big.mid()
-push_out()
 
 #servo1.min()
 #servo2.min()
 #servo3.min()
-sleep(1.5)
 
 
 
